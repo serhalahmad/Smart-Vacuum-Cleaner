@@ -23,23 +23,13 @@ This method is less computationally deamnding than the brute force method. Howev
 This method is the least computationally demanding since the agent directly goes to the nearest dirty tile without computing further steps. This method despite being the fastest produces bad results where the path chosen is somtimes very inefficient. 
 
 #### Genetic Algorithm 
-This method utilizes the 
+![Genetic](https://user-images.githubusercontent.com/97162452/158080195-96bb8a7a-3918-42f2-aa49-dcb5469e6ca8.jpg)
+This method utilizes the genetic algorithm with permutation encoding such that the chromosomes are the order of the dirty tile to be visited. The user, in this method, is given the ability to choose the number of iterations, the number of chromosomes, the mutation ratio, and the crossover ratio which can affect the results achieved. 
 
 ## Partially Observable
 ![Partially_obs](https://user-images.githubusercontent.com/97162452/158079844-b0d49f99-b943-433d-a2d7-1b62e7ed7528.jpg)
-
+The environment in this mode of operation is partially visible to the agent, in other words the agent can only see whether the tile under it is dirty. The agent also doesn't know the room architecture. Therefore, when the agent is first turned on, it covers all the tiles in order to generate an image of the room architecture in its memory and during this initial sweep, it also saves the location of the dirty tiles in its memory. The method used here is DFS. In the following sweeps the agent covers the room more easily with an emphasis on the previously dirty tiles. This mode of operation resembles the actual vacuum cleaner's operation.
 
 ## Adversarial 
 ![Adv](https://user-images.githubusercontent.com/97162452/158079846-1a0851bd-db34-4250-8ef0-cff161e13799.jpg)
-
-
-## Hardware Connections
-<img src="Hardware Circuitry .png" alt="Hardware Circuit" title="Hardware Circuit">
-
-
-## ROS RQT-Graph
-<img src="RQT.jpeg" alt="RQT-Graph" title="RQT-Graph">
-
-The `video_pub_py` node is running on the PC and computates the action that the user wants to execute and sends this command to `n__motor_run_py` which is running on the rover.
-The `n__ultrasonic_py` node is running on the Rover and publishes to the motor node and the buzzer node.
-The `n__rover_pub_py` node sends the video frames from the Rover to the PC `rover_frames`.
+This mode enables the user to add multiple agents being either good (vacuum cleaners) or bad (dirt producers) and then the agents compete one trying to clean the room and the other trying to clean it. The methods available for the agents are minimax, alpha beta, amd expectimax with the user given the ability to choose the depth of the methods (future steps to be computed). The user can also add as many agents thoough some delay may be prooduced due to high computations being done.
