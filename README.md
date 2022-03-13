@@ -4,8 +4,21 @@
 # Description
 In this project a vacuum cleaning agent is designed in order to clean a room that contains dirt as well as obstacles. The agent has multiple operation modes of operation.
 
-# Modes of Operation
+# Algorithms Used
+* Breadth First Search (BFS)
+* Depth First Search (DFS)
+* Least Cost Branch and Bound (LCBB)
+* Nearest Neighbor (NN)
+* Genetic Algorithm
+* Minimax
+* Minimax with Alpha–beta pruning 
+* Expectimax
 
+# Tools Used
+* Java
+* JavaFX
+
+# Modes of Operation
 ## Fully Observable
 ![Fully_obs](https://user-images.githubusercontent.com/97162452/158079847-130e3b30-27fb-44f3-b6c0-4349ae10d92d.jpg)
 
