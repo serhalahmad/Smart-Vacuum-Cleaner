@@ -1,5 +1,6 @@
 # Smart-Vacuum-Cleaner
 ![Main Screen](https://user-images.githubusercontent.com/97162452/158079848-8f03954b-88df-46ce-a4d8-e40a6b8a1af6.jpg)
+
 Done by Ahmad Serhal, Jad Farhat, and Majd Al Kontar
 
 # Description
